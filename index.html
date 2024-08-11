@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #444;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+        }
+        .download-link {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .download-link:hover {
+            background-color: #45a049;
+        }
+        .dashboard-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .dashboard-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .screenshot {
+            width: 100%;
+            max-width: 600px;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .links {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 1rem;
+            color: #4CAF50;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .links a:hover {
+            color: #388E3C;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Amazon Product Scrapping & Analysis</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>About the Project</h2>
+            <p>This project involves a detailed analysis and visualization of RAM and ROM sizes using Power BI. The line chart illustrates the changes in memory sizes over time, providing insights into trends and patterns.</p>
+        </section>
+
+        <section>
+            <h2>Project Report</h2>
+            <p>Download the full report to dive deep into the project's details, including methodologies, findings, and conclusions.</p>
+            <a href="path/to/your/report.pdf" class="download-link" download>Download Project Report</a>
+        </section>
+
+        <section class="dashboard-container">
+            <h2>Power BI Dashboard</h2>
+            <!-- Embed your Power BI dashboard here -->
+            <iframe src="https://app.powerbi.com/reportEmbed?reportId=f8286d26-2899-454c-a735-0c0d17d2e42b&autoAuth=true&ctid=40357f77-213c-4ea0-9e9a-8784e5b36407" frameborder="0" allowFullScreen="true"></iframe>
+        </section>
+
+        <section>
+            <h2>Power BI Dashboard Screenshots</h2>
+            <img src="dashboard.jpg" alt="Power BI Dashboard Screenshot 1" class="screenshot">
+            <p>The above screenshots display various aspects of the Power BI dashboard used in the project.</p>
+        </section>
+
+        <section>
+            <h2 style="color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 0.5rem;">Data Extraction Process</h2>
+            <p style="color: #555;">The data for this project was meticulously gathered using <strong>web scraping techniques</strong>. Below is an overview of the process:</p>
+            <ul style="color: #333; line-height: 1.7;">
+                <li style="margin-bottom: 1rem;">
+                    <strong style="color: #4CAF50; text-decoration: underline;">Web Scraping with Selenium and BeautifulSoup:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Used <strong>Selenium</strong> to automate the browsing and extraction of HTML content from Amazon product pages (laptops).</li>
+                        <li>Saved the HTML content of each page locally for further processing.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <strong style="color: #4CAF50; text-decoration: underline;">Data Parsing and Cleaning:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Employed <strong>BeautifulSoup</strong> to parse the HTML and extract specific details such as laptop brand, model, screen size, and price.</li>
+                        <li>Compiled the extracted data into a structured format and saved it as a CSV file using <strong>Pandas</strong>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong style="color: #4CAF50; text-decoration: underline;">Data Cleaning:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Used <strong>Microsoft Excel</strong> to clean and refine the dataset, ensuring the data was ready for analysis and visualization.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2 style="color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 0.5rem;">Skills Demonstrated</h2>
+            <p style="color: #555;">This project showcases a broad range of skills, including:</p>
+            <ul style="color: #333; line-height: 1.7;">
+                <li><strong style="color: #4CAF50;">Web Scraping:</strong> Automating data extraction from websites using Selenium and BeautifulSoup.</li>
+                <li><strong style="color: #4CAF50;">Data Cleaning:</strong> Ensuring data integrity and accuracy through thorough cleaning processes in MS Excel.</li>
+                <li><strong style="color: #4CAF50;">Data Analysis:</strong> Utilizing Pandas for data manipulation and Power BI for insightful data visualization.</li>
+                <li><strong style="color: #4CAF50;">Python Programming:</strong> Writing efficient scripts for web scraping, data parsing, and file handling.</li>
+                <li><strong style="color: #4CAF50;">Project Management:</strong> Successfully managing and executing the project from data extraction to final visualization.</li>
+            </ul>
+        </section>
+        
+
+        <div class="links">
+            <h2>Connect with Me</h2>
+            <a href="https://github.com/imswapnilrai" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/swapnil-rai-1bb124217/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
