@@ -87,7 +87,4 @@ You can view the interactive Power BI dashboard [here](https://app.powerbi.com/r
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you have suggestions for improvements.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
