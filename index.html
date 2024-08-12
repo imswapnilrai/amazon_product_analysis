@@ -41,6 +41,13 @@
             border-bottom: 2px solid #4CAF50;
             padding-bottom: 0.5rem;
         }
+        h4 {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
         p {
             font-size: 1rem;
             line-height: 1.7;
@@ -67,19 +74,27 @@
             text-align: center;
             margin: 2rem 0;
         }
+        .dashboard-container {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 0;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .dashboard-container h2 {
+            margin: 0;
+            padding: 1rem;
+            background-color: #4CAF50;
+            color: #fff;
+            border-bottom: 1px solid #45a049;
+        }
         .dashboard-container iframe {
             width: 100%;
-            height: 500px;
+            height: calc(100vh - 100px); /* Adjust the height to fit the screen better */
             border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .screenshot {
-            width: 100%;
-            max-width: 600px;
-            margin: 1rem 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 12px 12px;
         }
         .links {
             margin-top: 2rem;
@@ -107,13 +122,15 @@
     <div class="container">
         <section>
             <h2>About the Project</h2>
-            <p>This project involves a detailed analysis and visualization of RAM and ROM sizes using Power BI. The line chart illustrates the changes in memory sizes over time, providing insights into trends and patterns.</p>
+            <p>This project, titled <strong>"Amazon Product Scraping & Analysis"</strong>, focuses on extracting, cleaning, analyzing, and visualizing data from Amazon's laptop product listings. Using web scraping techniques with Selenium and BeautifulSoup, we gathered detailed information on various laptop models, including brand, screen size, RAM, HDD, operating system, and price. The data was cleaned and organized using Microsoft Excel, and insightful visualizations were created using Power BI.</p>
+            <p>The project aims to uncover trends and patterns in the laptop market, such as the distribution of screen sizes, the average price by brand and RAM, and the prevalence of graphic cards in laptops. Key findings include the popularity of specific screen sizes, the price differentiation based on RAM and operating system, and the dominance of certain brands in the market. This comprehensive analysis provides valuable insights into consumer preferences and market trends within the laptop segment.</p>
         </section>
+
 
         <section>
             <h2>Project Report</h2>
             <p>Download the full report to dive deep into the project's details, including methodologies, findings, and conclusions.</p>
-            <a href="path/to/your/report.pdf" class="download-link" download>Download Project Report</a>
+            <a href="amazon_product_analysis-main.zip" class="download-link" download>Download Project Report</a>
         </section>
 
         <section class="dashboard-container">
@@ -123,13 +140,127 @@
         </section>
 
         <section>
-            <h2>Power BI Dashboard Screenshots</h2>
-            <img src="dashboard.jpg" alt="Power BI Dashboard Screenshot 1" class="screenshot">
-            <p>The above screenshots display various aspects of the Power BI dashboard used in the project.</p>
+            <h2>Analysis Report</h2>
+            <div id="summary" style="display: block;">
+                <p style="color: #555;">From the analysis of the Amazon Product (Laptops) Dashboard, here are some key conclusions:</p>
+                <p>
+                    <strong style="color: #4CAF50; text-decoration: underline;">Average Price by Operating System:</strong><br>
+                    Windows 11 Pro has the highest average price among the operating systems, while DOS and JioOS are on the lower end.<br>
+                    <strong style="color: #4CAF50; text-decoration: underline;">Average Price by Color:</strong><br>
+                    Laptops in the Green color are the most expensive, followed by Silver and Graphite. Blue and Teal colored laptops have the lowest average prices.<br>
+                    <strong style="color: #4CAF50; text-decoration: underline;">Model Distribution:</strong><br>
+                    Count of Models by HDD:...
+                </p>
+                <a href="javascript:void(0);" id="readMoreBtn" onclick="toggleReadMore()">Read More</a>
+            </div>
+        
+            <div id="fullReport" style="display: none;">
+                <p>
+                    <strong style="color: #4CAF50; text-decoration: underline;">1. Average Price Insights:</strong>
+                </p>
+                <ol>
+                    <li>
+                        <strong>Average Price by Brand:</strong>
+                        <ul>
+                            <li>Apple laptops are the most expensive, followed by Samsung and MSI.</li>
+                            <li>Other brands like HP, Lenovo, Dell, and Honor have a more moderate average price.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Average Price by RAM:</strong>
+                        <ul>
+                            <li>Laptops with 48 GB RAM have the highest average price, followed by those with 32 GB and 24 GB RAM.</li>
+                            <li>8 GB RAM models also tend to be on the higher side, while 4 GB models are the least expensive.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Average Price by Operating System:</strong>
+                        <ul>
+                            <li>Windows 11 Pro has the highest average price among the operating systems.</li>
+                            <li>DOS and JioOS are on the lower end.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Average Price by Color:</strong>
+                        <ul>
+                            <li>Laptops in the Graphite color are the most expensive, followed by Blue and Grey.</li>
+                            <li>Green and Black colored laptops have the lowest average prices.</li>
+                        </ul>
+                    </li>
+                </ol>
+        
+                <p><strong style="color: #4CAF50; text-decoration: underline;" >2. Model Distribution:</strong></p>
+                <ol>
+                    <li>
+                        <strong>Count of Models by HDD:</strong>
+                        <ul>
+                            <li>512 GB HDD models are the most common (71.05%), with 1 TB models following (17.52%).</li>
+                            <li>There are fewer models with smaller HDD sizes.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>No. of Models by Brand:</strong>
+                        <ul>
+                            <li>The brand with the most models is Lenovo (23,6%), followed by HP(22.38%) and ASUS (18.25%).</li>
+                            <li>Apple has fewer models listed (13.6%).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>No. of Models by Screen Size:</strong>
+                        <ul>
+                            <li>The 15.6-inch screen size is the most popular among all available options, with the highest number of models (175), likely due to its balance between portability and usability.. </li>
+                            <li>Smaller screen sizes such as 11.6, 12.3, and 12.5 inches have significantly fewer models available, suggesting that these sizes are less common or in lower demand. </li>
+                        </ul>
+                    </li>
+                </ol>
+        
+                <p><strong style="color: #4CAF50; text-decoration: underline;">3. Features:</strong></p>
+                <ul>
+                    <li><strong>Models with Graphic Card:</strong>
+                        <ul>
+                            <li>A significant majority (83.45%) of laptops do not come with a dedicated graphic card.</li>
+                            <li>Only 16.3% include one, and a very small percentage (0.24%) have an advanced graphic card.</li>
+                        </ul>
+                    </li>
+                </ul>
+        
+                <p><strong style="color: #4CAF50; text-decoration: underline;">4. General Stats:</strong></p>
+                <ul>
+                    <li><strong>Brands:</strong> There are a total of 18 different brands available.</li>
+                    <li><strong>Number of Operating Systems:</strong> There are 7 different operating systems represented.</li>
+                </ul>
+        
+                <p><strong style="color: #4CAF50; text-decoration: underline;">Conclusion:</strong></p>
+                <ul>
+                    <li>High-end models are generally associated with higher RAM and the Apple brand.</li>
+                    <li>Windows 11 Pro is the most expensive OS, suggesting it's positioned for premium laptops.</li>
+                    <li>Most models come with standard HDD sizes and have basic graphic capabilities.</li>
+                    <li>Grey and Silver seem to be the preferred colours, which might indicate a popular market preference for these colors.</li>
+                </ul>
+        
+                <a href="javascript:void(0);" id="showLessBtn" onclick="toggleReadMore()">Show Less</a>
+            </div>
         </section>
+        
+        <script>
+            function toggleReadMore() {
+                var summary = document.getElementById("summary");
+                var fullReport = document.getElementById("fullReport");
+        
+                if (fullReport.style.display === "none") {
+                    fullReport.style.display = "block";
+                    summary.style.display = "none";
+                } else {
+                    fullReport.style.display = "none";
+                    summary.style.display = "block";
+                }
+            }
+        </script>
+        
+        
 
         <section>
-            <h2 style="color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 0.5rem;">Data Extraction Process</h2>
+            <h2 style="color: #000000; border-bottom: 2px solid #4CAF50; padding-bottom: 0.5rem;">Data Extraction Process</h2>
             <p style="color: #555;">The data for this project was meticulously gathered using <strong>web scraping techniques</strong>. Below is an overview of the process:</p>
             <ul style="color: #333; line-height: 1.7;">
                 <li style="margin-bottom: 1rem;">
@@ -156,7 +287,7 @@
         </section>
         
         <section>
-            <h2 style="color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 0.5rem;">Skills Demonstrated</h2>
+            <h2 style="color: #000000; border-bottom: 2px solid #4CAF50; padding-bottom: 0.5rem;">Skills Demonstrated</h2>
             <p style="color: #555;">This project showcases a broad range of skills, including:</p>
             <ul style="color: #333; line-height: 1.7;">
                 <li><strong style="color: #4CAF50;">Web Scraping:</strong> Automating data extraction from websites using Selenium and BeautifulSoup.</li>
@@ -169,7 +300,7 @@
         
 
         <div class="links">
-            <h2>Connect with Me</h2>
+            <h4>Connect with Me</h4>
             <a href="https://github.com/imswapnilrai" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/swapnil-rai-1bb124217/" target="_blank">LinkedIn</a>
         </div>
